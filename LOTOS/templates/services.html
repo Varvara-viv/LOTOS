@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги — Лотос</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="/">ЛОТОС</a>
+            <span>САЛОН КРАСОТЫ</span>
+        </div>
+
+        <nav class="navigation">
+            <a href="/">Главная</a>
+            <a href="/services">Услуги</a>
+            <a href="/team">Мастера</a>
+            <a href="/gallery">Галерея</a>
+            <a href="/about">О салоне</a>
+            <a href="/contacts">Контакты</a>
+        </nav>
+
+        <a href="/booking" class="header-button">Записаться</a>
+    </header>
+
+    <main class="inner-page">
+        <section class="page-heading">
+            <span>НАШИ ПРОЦЕДУРЫ</span>
+            <h1>Услуги салона</h1>
+            <p>Подчеркнём твою естественную красоту и подарим время для себя</p>
+        </section>
+
+        <section class="services-grid">
+
+            <div class="service-card">
+                <div class="service-icon">✿</div>
+                <h2>Парикмахерские услуги</h2>
+                <p>Стрижки, укладки, окрашивание и уход за волосами.</p>
+                <span>от 1 500 ₽</span>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">♡</div>
+                <h2>Маникюр и педикюр</h2>
+                <p>Уход за ногтями, покрытие и красивый дизайн.</p>
+                <span>от 1 200 ₽</span>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">❀</div>
+                <h2>Уход за лицом</h2>
+                <p>Очищение, увлажнение и косметические процедуры.</p>
+                <span>от 2 000 ₽</span>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✧</div>
+                <h2>Брови и ресницы</h2>
+                <p>Коррекция, окрашивание и ламинирование.</p>
+                <span>от 900 ₽</span>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">❁</div>
+                <h2>Макияж</h2>
+                <p>Дневной, вечерний и праздничный макияж.</p>
+                <span>от 2 500 ₽</span>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">♡</div>
+                <h2>Массаж</h2>
+                <p>Расслабляющие процедуры для отдыха и восстановления.</p>
+                <span>от 1 800 ₽</span>
+            </div>
+
+        </section>
+
+        <div class="services-button">
+            <a href="/booking" class="main-button">
+                Записаться на процедуру <span>→</span>
+            </a>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

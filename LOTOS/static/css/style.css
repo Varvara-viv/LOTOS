@@ -1,0 +1,1294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFF9F2;
+    color: #34352F;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ШАПКА САЙТА */
+
+.header {
+    width: 93%;
+    height: 90px;
+    position: absolute;
+    top: 24px;
+    left: 3.5%;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 35px;
+    background: rgba(255, 249, 242, 0.88);
+    backdrop-filter: blur(12px);
+
+    border-radius: 45px;
+    box-shadow: 0 4px 20px rgba(70, 90, 65, 0.08);
+}
+
+
+/* ЛОГОТИП */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #55765A;
+}
+
+.logo a {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-top: 2px;
+}
+
+
+/* МЕНЮ */
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navigation a {
+    font-size: 14px;
+    color: #34352F;
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    color: #D99EAE;
+}
+
+
+/* КНОПКА В ШАПКЕ */
+
+.header-button {
+    background-color: #D99EAE;
+    color: white;
+
+    padding: 16px 28px;
+    border-radius: 30px;
+
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.header-button:hover {
+    background-color: #C78396;
+    transform: translateY(-2px);
+}
+
+
+/* ГЛАВНЫЙ ЭКРАН */
+
+.hero {
+    width: 100%;
+    min-height: 900px;
+    height: 100vh;
+
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(255, 249, 242, 0.82),
+            rgba(255, 249, 242, 0.25) 55%,
+            rgba(255, 249, 242, 0.02)
+        ),
+        url("../images/main-photo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* ТЕКСТ НА ГЛАВНОМ ЭКРАНЕ */
+
+.hero-content {
+    width: 650px;
+    margin-left: 115px;
+    margin-top: 90px;
+}
+
+.hero-decoration {
+    color: #8FAF91;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+
+/* ЗАГОЛОВОК */
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 76px;
+    font-weight: 400;
+    line-height: 1.15;
+    color: #55765A;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #D99EAE;
+    display: block;
+}
+
+
+/* ОПИСАНИЕ */
+
+.hero-content p {
+    max-width: 440px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555B50;
+    margin-bottom: 35px;
+}
+
+
+/* ГЛАВНАЯ КНОПКА */
+
+.main-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+
+    padding: 22px 32px;
+
+    background-color: #8FAF91;
+    color: white;
+
+    border-radius: 40px;
+
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background-color: #55765A;
+    transform: translateY(-3px);
+}
+
+.main-button span {
+    font-size: 22px;
+}
+
+
+/* НИЖНЯЯ НАДПИСЬ */
+
+.hero-bottom {
+    position: absolute;
+    bottom: 35px;
+    left: 115px;
+    right: 115px;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #55765A;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+
+/* АДАПТАЦИЯ ДЛЯ ПЛАНШЕТОВ */
+
+@media (max-width: 1100px) {
+
+    .navigation {
+        gap: 12px;
+    }
+
+    .navigation a {
+        font-size: 12px;
+    }
+
+    .hero-content {
+        margin-left: 60px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+}
+
+
+/* АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ */
+
+@media (max-width: 750px) {
+
+    .header {
+        height: 75px;
+        padding: 0 20px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .logo a {
+        font-size: 27px;
+    }
+
+    .header-button {
+        padding: 13px 18px;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 750px;
+        background-position: 65% center;
+    }
+
+    .hero-content {
+        width: 85%;
+        margin-left: 25px;
+        margin-top: 100px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+        max-width: 330px;
+    }
+
+    .hero-decoration {
+        font-size: 12px;
+    }
+
+    .main-button {
+        padding: 17px 22px;
+        font-size: 13px;
+    }
+
+    .hero-bottom {
+        left: 25px;
+        right: 25px;
+        font-size: 9px;
+    }
+}
+
+/* СТРАНИЦА УСЛУГ */
+
+.inner-page {
+    min-height: 100vh;
+    padding: 160px 7% 80px;
+    background-color: #FFF9F2;
+}
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.page-heading > span {
+    color: #8FAF91;
+    font-size: 13px;
+    letter-spacing: 4px;
+}
+
+.page-heading h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 400;
+    color: #55765A;
+    margin: 18px 0;
+}
+
+.page-heading p {
+    color: #77776F;
+    font-size: 16px;
+}
+
+
+/* КАРТОЧКИ УСЛУГ */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background-color: white;
+    padding: 38px 30px;
+    border-radius: 25px;
+    border: 1px solid #F1E6DF;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(85, 118, 90, 0.10);
+}
+
+.service-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F8E9ED;
+    color: #D99EAE;
+    border-radius: 50%;
+    font-size: 27px;
+    margin-bottom: 25px;
+}
+
+.service-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: #55765A;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #77776F;
+    font-size: 14px;
+    line-height: 1.8;
+    min-height: 75px;
+    margin-bottom: 20px;
+}
+
+.service-card > span {
+    color: #D99EAE;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* КНОПКА ПОД УСЛУГАМИ */
+
+.services-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 55px;
+}
+
+
+/* АДАПТАЦИЯ */
+
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .inner-page {
+        padding: 130px 20px 60px;
+    }
+
+    .page-heading h1 {
+        font-size: 38px;
+    }
+
+    .page-heading p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 30px 25px;
+    }
+}
+
+
+/* ЦВЕТОЧНЫЙ ФОН САЛОНА */
+
+body {
+    background-color: #FFF9F2;
+    background-image:
+        radial-gradient(ellipse at 10% 10%, rgba(241, 206, 213, 0.25), transparent 35%),
+        radial-gradient(ellipse at 90% 90%, rgba(220, 232, 216, 0.35), transparent 35%),
+        radial-gradient(ellipse at 50% 50%, rgba(248, 233, 237, 0.3), transparent 60%);
+    background-attachment: fixed;
+}
+
+/* ЦВЕТЫ ПО ВСЕМУ ФОНУ */
+
+body::before {
+    content: "❀     ✿       ❀       ✿       ❀";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    font-size: 95px;
+    line-height: 2.8;
+    letter-spacing: 45px;
+    word-spacing: 20px;
+    color: #D99EAE;
+    opacity: 0.16;
+
+    overflow: hidden;
+    white-space: pre-wrap;
+}
+
+/* ДОПОЛНИТЕЛЬНЫЕ ЦВЕТЫ */
+
+body::after {
+    content: "✿      ❀       ✿       ❀       ✿";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    font-size: 75px;
+    line-height: 3.5;
+    letter-spacing: 65px;
+    word-spacing: 30px;
+    color: #8FAF91;
+    opacity: 0.13;
+
+    overflow: hidden;
+    white-space: pre-wrap;
+}
+
+/* СОДЕРЖИМОЕ ПОВЕРХ ФОНА */
+
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+.inner-page {
+    background: transparent;
+}
+
+/* ДЕКОРАТИВНЫЕ ЦВЕТЫ */
+
+body::before,
+body::after {
+    position: fixed;
+    z-index: 0;
+    pointer-events: none;
+    font-family: Georgia, serif;
+    font-size: 220px;
+    opacity: 0.12;
+    line-height: 1;
+}
+
+body::before {
+    content: "❀";
+    top: 100px;
+    left: -45px;
+    color: #D99EAE;
+    transform: rotate(-20deg);
+}
+
+body::after {
+    content: "✿";
+    bottom: 20px;
+    right: -35px;
+    color: #8FAF91;
+    transform: rotate(20deg);
+}
+
+/* СОДЕРЖИМОЕ СТРАНИЦ */
+
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ФОН ВНУТРЕННИХ СТРАНИЦ */
+
+.inner-page {
+    background: transparent;
+}
+
+/* НОВЫЙ ЦВЕТОЧНЫЙ ФОН */
+
+body {
+    background-color: #FFF9F2 !important;
+    background-image:
+        radial-gradient(circle at 10% 15%, #F8E9ED 0%, transparent 18%),
+        radial-gradient(circle at 85% 25%, #F1CED5 0%, transparent 20%),
+        radial-gradient(circle at 25% 80%, #DCE8D8 0%, transparent 20%),
+        radial-gradient(circle at 90% 90%, #F8E9ED 0%, transparent 20%);
+    background-attachment: fixed;
+}
+
+/* ЦВЕТОЧНЫЙ УЗОР */
+
+body::before {
+    content: "✿   ❀   ✿   ❀   ✿   ❀   ✿   ❀   ✿   ❀   ✿   ❀";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+
+    font-size: 65px;
+    line-height: 2.5;
+    letter-spacing: 25px;
+    color: #D99EAE;
+    opacity: 0.25;
+    overflow: hidden;
+}
+
+/* ВТОРОЙ СЛОЙ ЦВЕТОВ */
+
+body::after {
+    content: "❀   ✿   ❀   ✿   ❀   ✿   ❀   ✿   ❀   ✿";
+    position: fixed;
+    top: 35px;
+    left: 35px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+
+    font-size: 45px;
+    line-height: 3;
+    letter-spacing: 40px;
+    color: #8FAF91;
+    opacity: 0.22;
+    overflow: hidden;
+}
+
+/* ПОВЕРХНОСТИ СТРАНИЦ */
+
+.inner-page {
+    background: transparent !important;
+}
+
+.header,
+.service-card {
+    position: relative;
+    z-index: 2;
+}
+
+/* СТРАНИЦА МАСТЕРОВ */
+
+.masters-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.master-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 25px;
+    text-align: center;
+    border: 1px solid #F1E6DF;
+    transition: 0.3s;
+}
+
+.master-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(85, 118, 90, 0.10);
+}
+
+.master-photo {
+    width: 100%;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F8E9ED;
+    border-radius: 18px;
+    color: #D99EAE;
+    font-size: 65px;
+    margin-bottom: 22px;
+}
+
+.master-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #55765A;
+    margin-bottom: 10px;
+}
+
+.master-card > span {
+    color: #D99EAE;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.master-card p {
+    color: #77776F;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-top: 15px;
+}
+
+@media (max-width: 1000px) {
+    .masters-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .masters-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .master-photo {
+        height: 260px;
+    }
+}
+
+/* ГАЛЕРЕЯ */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 280px;
+    gap: 22px;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 22px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 25px;
+    transition: 0.3s;
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.gallery-item span {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+}
+
+.gallery-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent, rgba(35, 45, 35, 0.55));
+}
+
+/* ВРЕМЕННЫЕ ЦВЕТОВЫЕ ФОНЫ */
+
+.gallery-one {
+    background-color: #D9B8A9;
+    background-image: linear-gradient(135deg, #E9CFC2, #A98478);
+}
+
+.gallery-two {
+    background-color: #EBCFD5;
+    background-image: linear-gradient(135deg, #F5DCE1, #C98E9E);
+}
+
+.gallery-three {
+    background-color: #DCE8D8;
+    background-image: linear-gradient(135deg, #E8EEDB, #91AA91);
+}
+
+.gallery-four {
+    background-color: #E8D9D0;
+    background-image: linear-gradient(135deg, #EBDCD2, #B99B8B);
+}
+
+.gallery-five {
+    background-color: #D8C6C8;
+    background-image: linear-gradient(135deg, #F1D7DC, #AD8794);
+}
+
+.gallery-six {
+    background-color: #D5E0D0;
+    background-image: linear-gradient(135deg, #E5EBDD, #849B82);
+}
+
+@media (max-width: 850px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 250px;
+    }
+}
+
+/* СТРАНИЦА О САЛОНЕ */
+
+.about-content {
+    max-width: 1100px;
+    margin: 0 auto 70px;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-decoration {
+    min-height: 350px;
+    border-radius: 35px;
+    background: linear-gradient(135deg, #F8E9ED, #DCE8D8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: #D99EAE;
+    font-size: 75px;
+}
+
+.about-flower {
+    font-size: 130px;
+    color: #8FAF91;
+}
+
+.about-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 400;
+    color: #55765A;
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #77776F;
+    margin-bottom: 18px;
+}
+
+.about-values {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.value-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #F1E6DF;
+    border-radius: 25px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+}
+
+.value-card > span {
+    color: #D99EAE;
+    font-size: 38px;
+}
+
+.value-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: #55765A;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 15px 0;
+}
+
+.value-card p {
+    color: #77776F;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.about-quote {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #D99EAE;
+    font-size: 27px;
+    margin-top: 65px;
+}
+
+@media (max-width: 750px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-decoration {
+        min-height: 230px;
+    }
+
+    .about-text h2 {
+        font-size: 28px;
+    }
+
+    .about-values {
+        grid-template-columns: 1fr;
+    }
+
+    .about-quote {
+        font-size: 21px;
+    }
+}
+
+/* СТРАНИЦА КОНТАКТОВ */
+
+.contacts-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: stretch;
+}
+
+.contacts-info {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #F1E6DF;
+    border-radius: 28px;
+    padding: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.contact-item > span {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #F8E9ED;
+    color: #D99EAE;
+    font-size: 26px;
+}
+
+.contact-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 400;
+    color: #55765A;
+    margin-bottom: 7px;
+}
+
+.contact-item p {
+    font-size: 14px;
+    color: #77776F;
+    line-height: 1.6;
+}
+
+.contacts-map {
+    min-height: 430px;
+    border-radius: 28px;
+    background: linear-gradient(135deg, #DCE8D8, #F8E9ED);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.map-decoration {
+    text-align: center;
+}
+
+.map-decoration span {
+    color: #D99EAE;
+    font-size: 90px;
+}
+
+.map-decoration h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: #55765A;
+    margin: 15px 0;
+}
+
+.map-decoration p {
+    color: #77776F;
+    font-size: 14px;
+}
+
+@media (max-width: 750px) {
+    .contacts-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contacts-info {
+        padding: 25px;
+    }
+
+    .contacts-map {
+        min-height: 280px;
+    }
+}
+
+/* СТРАНИЦА ОНЛАЙН-ЗАПИСИ */
+
+.booking-container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.booking-form {
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid #F1E6DF;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 10px 35px rgba(85, 118, 90, 0.07);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    color: #55765A;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #E9DCD7;
+    border-radius: 13px;
+    background: #FFF9F6;
+    color: #34352F;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #D99EAE;
+    box-shadow: 0 0 0 3px rgba(217, 158, 174, 0.12);
+}
+
+.form-group textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.booking-submit {
+    width: 100%;
+    padding: 19px;
+    border: none;
+    border-radius: 35px;
+    background: #8FAF91;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.booking-submit:hover {
+    background: #55765A;
+    transform: translateY(-2px);
+}
+
+.booking-submit span {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.booking-success {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.94);
+    padding: 55px 30px;
+    border-radius: 30px;
+}
+
+.booking-success > span {
+    color: #D99EAE;
+    font-size: 65px;
+}
+
+.booking-success h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #55765A;
+    margin: 20px 0;
+}
+
+.booking-success p {
+    color: #77776F;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+    .booking-form {
+        padding: 25px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+/* АДМИНИСТРАТИВНАЯ ПАНЕЛЬ */
+
+.admin-login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #F1E6DF;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(85, 118, 90, 0.08);
+}
+
+.login-flower {
+    color: #D99EAE;
+    font-size: 55px;
+}
+
+.login-card h1 {
+    font-family: 'Playfair Display', serif;
+    color: #55765A;
+    font-size: 36px;
+    letter-spacing: 5px;
+    margin: 10px 0;
+}
+
+.login-subtitle {
+    color: #77776F;
+    margin-bottom: 30px;
+}
+
+.login-error {
+    color: #C45D70;
+    background: #F8E9ED;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+.login-back {
+    display: inline-block;
+    color: #8FAF91;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+/* ВЕРХНЯЯ ЧАСТЬ ПАНЕЛИ */
+
+.admin-top {
+    max-width: 1300px;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.admin-stat {
+    background: white;
+    border: 1px solid #F1E6DF;
+    border-radius: 18px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.admin-stat span {
+    color: #77776F;
+    font-size: 14px;
+}
+
+.admin-stat strong {
+    color: #55765A;
+    font-size: 28px;
+}
+
+.admin-logout {
+    background: #F8E9ED;
+    color: #B87889;
+    padding: 15px 22px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+/* ТАБЛИЦА ЗАЯВОК */
+
+.admin-table-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #F1E6DF;
+    border-radius: 20px;
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px;
+}
+
+.admin-table th {
+    background: #F8E9ED;
+    color: #55765A;
+    padding: 18px 12px;
+    font-size: 13px;
+    text-align: left;
+}
+
+.admin-table td {
+    padding: 17px 12px;
+    border-bottom: 1px solid #F1E6DF;
+    color: #555B50;
+    font-size: 13px;
+}
+
+.admin-table tr:hover td {
+    background: #FFF9F6;
+}
+
+.delete-button {
+    background: #F8E9ED;
+    color: #B87889;
+    border: none;
+    border-radius: 15px;
+    padding: 9px 13px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background: #F1CED5;
+}
+
+.empty-bookings {
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.empty-bookings span {
+    font-size: 55px;
+    color: #D99EAE;
+}
+
+.empty-bookings h2 {
+    color: #55765A;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    margin: 15px 0;
+}
+
+.empty-bookings p {
+    color: #77776F;
+    font-size: 14px;
+}
+
+.admin-back {
+    text-align: center;
+    margin-top: 35px;
+}
+
+@media (max-width: 600px) {
+    .login-card {
+        padding: 30px 20px;
+    }
+
+    .admin-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+/* КНОПКА АДМИНИСТРАТОРА */
+
+.site-footer {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 30px 20px;
+    color: #77776F;
+    font-size: 13px;
+}
+
+.admin-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #8FAF91;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.admin-link:hover {
+    color: #55765A;
+    text-decoration: underline;
+}

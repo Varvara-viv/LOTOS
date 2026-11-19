@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея — Лотос</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="/">ЛОТОС</a>
+            <span>САЛОН КРАСОТЫ</span>
+        </div>
+
+        <nav class="navigation">
+            <a href="/">Главная</a>
+            <a href="/services">Услуги</a>
+            <a href="/team">Мастера</a>
+            <a href="/gallery">Галерея</a>
+            <a href="/about">О салоне</a>
+            <a href="/contacts">Контакты</a>
+        </nav>
+
+        <a href="/booking" class="header-button">Записаться</a>
+    </header>
+
+    <main class="inner-page">
+
+        <section class="page-heading">
+            <span>НАШИ РАБОТЫ</span>
+            <h1>Галерея красоты</h1>
+            <p>Вдохновляйся нашими работами и выбирай свой образ</p>
+        </section>
+
+        <section class="gallery-grid">
+
+            <div class="gallery-item gallery-one">
+                <span>Красивые волосы</span>
+            </div>
+
+            <div class="gallery-item gallery-two">
+                <span>Маникюр</span>
+            </div>
+
+            <div class="gallery-item gallery-three">
+                <span>Уход за лицом</span>
+            </div>
+
+            <div class="gallery-item gallery-four">
+                <span>Брови и ресницы</span>
+            </div>
+
+            <div class="gallery-item gallery-five">
+                <span>Макияж</span>
+            </div>
+
+            <div class="gallery-item gallery-six">
+                <span>Образы для тебя</span>
+            </div>
+
+        </section>
+
+        <div class="services-button">
+            <a href="/booking" class="main-button">
+                Создать свой образ <span>→</span>
+            </a>
+        </div>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
